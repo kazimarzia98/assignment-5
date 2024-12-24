@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="cupcake">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,65 @@
     <!-- daisy link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+        .btn-style {
+            background-color: #B4F461;
+            color: black;
+            border-radius: 8px;
+            padding: 12px 32px 12px 32px;
+            font-weight: 700;
+            font-family: "Lexend", serif;
+        }
+
+        .font-style {
+            font-family: "Lexend", serif;
+        }
+
+        .bg-style{
+            background-color: #f3ecde;
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1>hello daisy</h1>
-    
+    <header>
+
+        <section class="flex flex-row justify-around pt-9 pb-9 bg-style">
+            <!-- header button -->
+        <div>
+            <button class="btn-style">Blog</button>
+        </div>
+
+        <!-- header logo -->
+        <div class="flex">
+            <img src="./assets/logo.png" alt="">
+            <div class="font-style text-3xl pl-2 mt-2">Donate Bangladesh</div>
+        </div>
+
+        <!-- header input field -->
+        <div class="flex pt-2">
+            <img class="w-6 h-6 mt-1" src="./assets/coin.png" alt="">
+            <div class="font-style text-lg pl-2">5500</div>
+        </div>
+        </section>
+
+        <!-- tab -->
+        <section class="pt-9">
+            <div role="tablist" class="tabs w-3/12 mx-auto gap-4">
+                <a role="tab" class="  btn-style py-0 tab">Donate</a>
+                <a role="tab" class=" tab border border-gray-400 rounded-md">History</a>
+              </div>
+        </section>
+
+    </header>
+
 </body>
+
 </html>
