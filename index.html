@@ -28,7 +28,7 @@
             font-family: "Lexend", serif;
         }
 
-        .bg-style{
+        .bg-style {
             background-color: #f3ecde;
         }
     </style>
@@ -36,36 +36,148 @@
 </head>
 
 <body>
-    <header>
+    <header class="sticky top-0 overflow-hidden z-10">
 
-        <section class="flex flex-row justify-around pt-9 pb-9 bg-style">
+        <section class="flex flex-col gap-4 justify-center items-center lg:flex-row lg:justify-around pt-9 pb-9 bg-style">
             <!-- header button -->
-        <div>
-            <button class="btn-style">Blog</button>
-        </div>
+            <div>
+                <button class="btn-style">Blog</button>
+            </div>
 
-        <!-- header logo -->
-        <div class="flex">
-            <img src="./assets/logo.png" alt="">
-            <div class="font-style text-3xl pl-2 mt-2">Donate Bangladesh</div>
-        </div>
+            <!-- header logo -->
+            <div class="flex">
+                <img src="./assets/logo.png" alt="">
+                <div class="font-style text-3xl pl-2 mt-2">Donate Bangladesh</div>
+            </div>
 
-        <!-- header input field -->
-        <div class="flex pt-2">
-            <img class="w-6 h-6 mt-1" src="./assets/coin.png" alt="">
-            <div class="font-style text-lg pl-2">5500</div>
-        </div>
+            <!-- header input field -->
+            <div class="flex pt-2">
+                <img class="w-6 h-6 mt-1" src="./assets/coin.png" alt="">
+                <div id="balance" class="font-style text-lg pl-2">5500</div>
+            </div>
         </section>
 
         <!-- tab -->
-        <section class="pt-9">
+        <section class="pt-9 bg-zinc-50">
             <div role="tablist" class="tabs w-3/12 mx-auto gap-4">
-                <a role="tab" class="  btn-style py-0 tab">Donate</a>
-                <a role="tab" class=" tab border border-gray-400 rounded-md">History</a>
-              </div>
+                <a id="btn-donate" role="tab" class="  btn-style py-0 tab hover:bg-green-400">Donate</a>
+                <a id="btn-history" role="tab"
+                    class=" tab border border-gray-400 rounded-md hover:bg-slate-300 ">History</a>
+            </div>
+            <br>
+            <div class="divider"></div>
+
         </section>
 
     </header>
+
+
+    <main>
+
+        <!-- card 1 start -->
+
+        <div
+            class="card lg:card-side bg-base-100 shadow-xl w-3/5 mx-auto mt-11 py-5 px-5 font-style border border-gray-200">
+            <figure>
+                <img src="./assets/noakhali.png" alt="" />
+            </figure>
+            <div class="card-body">
+                <!-- card amount -->
+                <div class="flex border bg-neutral-200 py-2 px-2 w-max rounded-md">
+                    <img class="w-5 h-5" src="./assets/coin.png" alt="">
+                    <p id="card-amount" class=" pl-1">600</p>
+
+                </div>
+                <h2 id="donation-name" class="card-title">Donate for Noakhali</h2>
+                <p class="text-sm text-gray-500"> The recent floods in Noakhali have caused significant damage <br> to
+                    homes infrastructure. Your donation will help provide <br> essential supplies and to those affected
+                    by this disaster. Every <br> contribution, big or small, makes difference. Please join us in <br>
+                    supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+                <!-- input -->
+                <input id="donate-amount" type="text" placeholder="Write Donation Amount"
+                    class="input border border-gray-300 rounded-md mb-2 text-sm" />
+
+                <div class="card-actions justify-end">
+                    <button class="btn-style w-full">Donate Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- card 1 end -->
+
+        <!-- card 2 start -->
+
+        <div
+            class="card lg:card-side bg-base-100 shadow-xl w-3/5 mx-auto mt-11 py-5 px-5 font-style border border-gray-200">
+            <figure>
+                <img src="./assets/feni.png" alt="" />
+            </figure>
+            <div class="card-body">
+                <!-- card amount -->
+                <div class="flex border bg-neutral-200 py-2 px-2 w-max rounded-md">
+                    <img class="w-5 h-5" src="./assets/coin.png" alt="">
+                    <p class=" pl-1">600</p>
+
+                </div>
+                <h2 class="card-title">Donate for Feni</h2>
+                <p class="text-sm text-gray-500"> The recent floods in Feni have devastated local communities,<br>
+                    leading to severe disruption and loss. Your generous donation <br> will help provide immediate aid,
+                    including food, clean water,<br> and medical supplies, to those affected by this calamity.
+                    <br>Together, we can offer crucial support and help rebuild lives in <br> the aftermath of this
+                    disaster. Every contribution counts towards making a <br> real difference. Please consider donating
+                    today to assist those in urgent need.
+                </p>
+
+                <!-- input -->
+                <input type="text" placeholder="Write Donation Amount"
+                    class="input border border-gray-300 rounded-md mb-2 text-sm" />
+
+                <div class="card-actions justify-end">
+                    <button class="btn-style w-full">Donate Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- card 2 end -->
+
+        <!-- card 3 start -->
+
+        <div
+            class="card lg:card-side bg-base-100 shadow-xl w-3/5 mx-auto mt-11 py-5 px-5 font-style border border-gray-200 mb-9">
+            <figure class="lg:w-2/4">
+                <img class="lg:w-full" src="./assets/quota-protest.png" alt="" />
+            </figure>
+            <div class="card-body lg:w-2/4">
+                <!-- card amount -->
+                <div class="flex border bg-neutral-200 py-2 px-2 w-max rounded-md">
+                    <img class="w-5 h-5" src="./assets/coin.png" alt="">
+                    <p class=" pl-1">600</p>
+
+                </div>
+                <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+                <p class="text-sm text-gray-500"> The recent Quota movement has resulted in numerous injuries and
+                    significant hardship for many individuals. Your support is crucial in
+                    providing medical assistance, rehabilitation, and necessary supplies
+                    to those affected. By contributing, you help ensure that injured
+                    individuals receive the care and support they need during this
+                    challenging time. Every donation plays a vital role in alleviating their
+                    suffering and aiding in their recovery. Please consider making a donation to support these brave
+                    individuals in their time of need.</p>
+
+
+                <!-- input -->
+                <input type="text" placeholder="Write Donation Amount"
+                    class="input border border-gray-300 rounded-md mb-2 text-sm" />
+
+                <div class="card-actions justify-end">
+                    <button class="btn-style w-full">Donate Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- card 3 end -->
+    </main>
 
 </body>
 
