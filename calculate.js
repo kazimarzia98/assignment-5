@@ -10,17 +10,16 @@ document.getElementById('card-donate-btn').addEventListener('click', function ()
 
         const totalCardAmount = inputAmount + cardAmount;
 
-        document.getElementById('card-amount').innerText = totalCardAmount;
+        document.getElementById('card-amount').innerText = totalCardAmount.toFixed(2);
 
         const balance = parseFloat(document.getElementById('balance').innerText);
         const remainingBalance = balance - inputAmount;
-        console.log(remainingBalance);
 
-        document.getElementById('balance').innerText = remainingBalance;
+        document.getElementById('balance').innerText = remainingBalance.toFixed(2);
 
         const donationName = document.getElementById('donation-name').innerText;
         const historyItem = document.createElement('div');
-        historyItem.className = 'bg-white border border-gray-200 rounded-md w-full lg:w-10/12 mx-auto py-7 px-5';
+        historyItem.className = 'bg-white border border-gray-200 rounded-md lg:w-full w-10/12 mx-auto py-7 px-5';
 
         historyItem.innerHTML = `
         <p class='text-lg font-style'>${inputAmount} Taka is Donated for ${donationName}</p>
