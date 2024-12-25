@@ -8,7 +8,7 @@
     <!-- daisy link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
 
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -99,14 +99,30 @@
                         affected
                         by this disaster. Every <br> contribution, big or small, makes difference. Please join us in
                         <br>
-                        supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                        supporting the relief efforts and making a positive impact on the lives of those in need.
+                    </p>
 
                     <!-- input -->
-                    <input id="donate-amount" type="text" placeholder="Write Donation Amount"
+                    <input id="donate-amount" type="number" placeholder="Write Donation Amount"
                         class="input border border-gray-300 rounded-md mb-2 text-sm" />
 
                     <div class="card-actions justify-end">
+                        <!-- donate button -->
                         <button id="card-donate-btn" class="btn-style w-full">Donate Now</button>
+                        <dialog id="my_modal_4" className="modal w-1/2">
+                            <div className="modal-box w-1/2 py-7 px-5">
+                                <h3 className="font-bold text-3xl">Congrates! </h3>
+                                <img class="w-5 h-5" src="./assets/coin.png" alt="">
+                                <p className="py-4">You Have Donated for Humankind</p>
+                                <span class="text-xl font-bold">Successfully</span>
+                                <div className="modal-action">
+                                    <form method="dialog">
+                                        <button className="btn py-2 px-2 bg-slate-200">Close confirmation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+
                     </div>
                 </div>
             </div>
@@ -127,7 +143,7 @@
                         <p id="card-2-amount" class=" pl-1">1000</p>
 
                     </div>
-                    <h2 class="card-title">Donate for Feni</h2>
+                    <h2 id="donation-name-2" class="card-title">Donate for Feni</h2>
                     <p class="text-sm text-gray-500"> The recent floods in Feni have devastated local communities,<br>
                         leading to severe disruption and loss. Your generous donation <br> will help provide immediate
                         aid,
@@ -139,11 +155,27 @@
                     </p>
 
                     <!-- input -->
-                    <input id="donate-amount-2"  type="text" placeholder="Write Donation Amount"
+                    <input id="donate-amount-2" type="number" placeholder="Write Donation Amount"
                         class="input border border-gray-300 rounded-md mb-2 text-sm" />
 
                     <div class="card-actions justify-end">
+                        <!-- donate button -->
                         <button id="card-2-donate-btn" class="btn-style w-full">Donate Now</button>
+                        <dialog id="my_modal_4" className="modal w-1/2">
+                            <div className="modal-box w-1/2 py-7 px-5">
+                                <h3 className="font-bold text-3xl">Congrates! </h3>
+                                <img class="w-5 h-5" src="./assets/coin.png" alt="">
+                                <p className="py-4">You Have Donated for Humankind</p>
+                                <span class="text-xl font-bold">Successfully</span>
+                                <div className="modal-action">
+                                    <form method="dialog">
+                                        <button className="btn py-2 px-2 bg-slate-200">Close confirmation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+
+
                     </div>
                 </div>
             </div>
@@ -164,7 +196,7 @@
                         <p id="card-3-amount" class=" pl-1">900</p>
 
                     </div>
-                    <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
+                    <h2 id="donation-name-3" class="card-title">Aid for Injured in the Quota Movement</h2>
                     <p class="text-sm text-gray-500"> The recent Quota movement has resulted in numerous injuries and
                         significant hardship for many individuals. Your support is crucial in
                         providing medical assistance, rehabilitation, and necessary supplies
@@ -176,7 +208,7 @@
 
 
                     <!-- input -->
-                    <input id="donate-amount-3"  type="text" placeholder="Write Donation Amount"
+                    <input id="donate-amount-3" type="number" placeholder="Write Donation Amount"
                         class="input border border-gray-300 rounded-md mb-2 text-sm" />
 
                     <div class="card-actions justify-end">
@@ -191,11 +223,14 @@
         <!-- history section -->
         <div id="history-body" class="mb-8 hidden"></div>
 
+        <!-- modal -->
+
+
     </main>
 
 
 
-    
+
     <script src="/calculate.js"></script>
 </body>
 
