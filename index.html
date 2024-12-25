@@ -38,7 +38,8 @@
 <body>
     <header class="sticky top-0 overflow-hidden z-10">
 
-        <section class="flex flex-col gap-4 justify-center items-center lg:flex-row lg:justify-around pt-9 pb-9 bg-style">
+        <section
+            class="flex flex-col gap-4 justify-center items-center lg:flex-row lg:justify-around pt-9 pb-9 bg-style">
             <!-- header button -->
             <div>
                 <button class="btn-style">Blog</button>
@@ -60,9 +61,9 @@
         <!-- tab -->
         <section class="pt-9 bg-zinc-50">
             <div role="tablist" class="tabs w-3/12 mx-auto gap-4">
-                <a id="btn-donate" role="tab" class="  btn-style py-0 tab hover:bg-green-400">Donate</a>
+                <a id="btn-donate" role="tab" class="btn-style py-0 tab hover:bg-green-300">Donate</a>
                 <a id="btn-history" role="tab"
-                    class=" tab border border-gray-400 rounded-md hover:bg-slate-300 ">History</a>
+                    class=" tab border border-gray-400 rounded-md hover:bg-green-300 ">History</a>
             </div>
             <br>
             <div class="divider"></div>
@@ -74,10 +75,12 @@
 
     <main>
 
-        <!-- card 1 start -->
+        <div id="card-body">
+            <!-- card 1 start -->
 
-        <div
-            class="card lg:card-side bg-base-100 shadow-xl w-3/5 mx-auto mt-11 py-5 px-5 font-style border border-gray-200">
+        <div class="card lg:card-side bg-base-100 shadow-xl w-3/5 mx-auto mt-11 py-5 px-5 font-style border
+        border-gray-200">
+            
             <figure>
                 <img src="./assets/noakhali.png" alt="" />
             </figure>
@@ -99,7 +102,7 @@
                     class="input border border-gray-300 rounded-md mb-2 text-sm" />
 
                 <div class="card-actions justify-end">
-                    <button class="btn-style w-full">Donate Now</button>
+                    <button id="card-donate-btn" class="btn-style w-full">Donate Now</button>
                 </div>
             </div>
         </div>
@@ -177,8 +180,17 @@
         </div>
 
         <!-- card 3 end -->
+        </div>
+
+        <!-- history section -->
+        <div id="history-body" class="mb-8 hidden"></div>
+
     </main>
 
+
+
+
+    <script src="/calculate.js"></script>
 </body>
 
 </html>
